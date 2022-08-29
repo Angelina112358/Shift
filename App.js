@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
-import ConvertItem from './components/ConvertItem';
 import Header from './components/Header';
+import ConvertItem from './components/ConvertItem';
+import Row from './components/Row';
+import Button from './components/Button';
 
 
 export default function App() {
@@ -14,6 +16,7 @@ export default function App() {
   ]);
   return (
     <View>
+      <StatusBar style="auto" />
       <Header />
       <View>
         {/* area with currency-input */}
@@ -24,10 +27,29 @@ export default function App() {
           )}
         />
       </View>
-      <View>
+      <View style={styles.areaNumbers}>
         {/* area with set of numbers */}
+        <Row>
+          <Button text="7"/>
+          <Button text="8"/>
+          <Button text="9"/>
+        </Row>
+        <Row>
+          <Button text="4"/>
+          <Button text="5"/>
+          <Button text="6"/>
+        </Row>
+        <Row>
+          <Button text="1"/>
+          <Button text="2"/>
+          <Button text="3"/>
+        </Row>
+        <Row>
+          <Button text="0"/>
+          <Button text=","/>
+          <Button text="x"/>
+        </Row>
       </View>
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -39,4 +61,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  areaNumbers:{
+    // REFACTOR!!!
+    marginTop: 70,
+  }
 });
