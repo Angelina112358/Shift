@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Row from './Row';
 import Button from './Button';
@@ -6,7 +6,6 @@ import Button from './Button';
 export default function Numbers() {
     return(
         <View style={styles.areaNumbers}>
-        {/* area with set of numbers */}
         <Row>
           <Button text="7"/>
           <Button text="8"/>
