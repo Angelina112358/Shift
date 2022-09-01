@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { TouchableOpacity, StyleSheet, Text, Dimensions } from "react-native";
 
 const screen = Dimensions.get("window");
