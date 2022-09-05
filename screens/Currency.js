@@ -1,10 +1,14 @@
 import React from "react";
 import { useState } from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
-import ConvertItem from './components/ConvertItem';
+import { View, FlatList } from 'react-native';
+import ConvertItem from '../components/ConvertItem';
+import Numbers from '../components/Numbers';
 
+export default function Currency() {
 
-export default function CurrencyConverter() {
+    const pressHandler = ({ navigation }) => {
+        navigation.goBack()
+    }
 
     {/* temporary mocks */ }
     const [currency, setCurrency] = useState([
@@ -12,6 +16,7 @@ export default function CurrencyConverter() {
         { text: 'USD', key: 2 },
         { text: 'EUR', key: 3 },
     ]);
+
     return (
         <View>
             <View>
@@ -23,6 +28,7 @@ export default function CurrencyConverter() {
                     )}
                 />
             </View>
+            <Numbers />
         </View>
 
     )
