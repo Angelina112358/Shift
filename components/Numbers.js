@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     areaNumbers:{
-      // REFACTOR!!!
-      marginTop: 70,
+      marginTop: 20
     }
   });

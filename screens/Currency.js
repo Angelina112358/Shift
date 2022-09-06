@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { View, FlatList } from 'react-native';
-import ConvertItem from '../components/ConvertItem';
+import CurrencyInput from '../components/CurrencyInput';
 import Numbers from '../components/Numbers';
 
 export default function Currency() {
@@ -12,21 +12,22 @@ export default function Currency() {
 
     {/* temporary mocks */ }
     const [currency, setCurrency] = useState([
-        { text: 'BYN', key: 1 },
-        { text: 'USD', key: 2 },
-        { text: 'EUR', key: 3 },
+        { key: 1, text: 'BYN' },
+        { key: 2, text: 'USD' },
     ]);
 
     return (
         <View>
             <View>
                 {/* area with currency-input */}
-                <FlatList
+                {/* <FlatList
                     data={currency}
                     renderItem={({ item }) => (
-                        <ConvertItem item={item} />
+                        <CurrencyInput item={item} />
                     )}
-                />
+                /> */}
+                <CurrencyInput/>
+                <CurrencyInput/>
             </View>
             <Numbers />
         </View>

@@ -1,7 +1,10 @@
+import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from "react-navigation";
+
 import Home from '../screens/Home';
 import Currency from '../screens/Currency';
+
 
 const screens = {
     Home: {

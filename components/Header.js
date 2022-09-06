@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#FFA500",
         elevation: 1.5,
         marginTop: 50,
-        padding: 15
+        padding: 15,
+        alignItems: 'center',
     },
     title: {
         fontWeight: '700',
