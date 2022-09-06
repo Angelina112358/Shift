@@ -5,8 +5,9 @@ import { ModalPicker } from '../components/ModalPicker';
 
 export default function CurrencyInput(props) {
 
-    const [chooseData, setChooseData] = useState('Select item');
+    const [chooseData, setChooseData] = useState('USD');
     const [isModalVisible, setIsModalVisible] = useState(false);
+
     const changeModalVisibility = (bool) => {
         setIsModalVisible(bool)
     }
@@ -14,13 +15,15 @@ export default function CurrencyInput(props) {
     const setData = (option) => {
         setChooseData(option)
     }
+
     return (
         <TouchableOpacity style={styles.item}>
-            <TextInput
-                placeholder='input number' value={props.amount}
+            <TextInput style={styles.text} 
+                placeholder='1'
+                placeholderTextColor="#FFA500" 
             />
 
-            <Text style={styles.text} onPress={() => changeModalVisibility(true)} value={props.currency}>
+            <Text style={styles.text} onPress={() => changeModalVisibility(true)}>
                 {chooseData}
             </Text>
 
@@ -28,8 +31,7 @@ export default function CurrencyInput(props) {
                 transparent={true}
                 animationType='fade'
                 visible={isModalVisible}
-                nRequestClose={() => changeModalVisibility(false)}
-            >
+                nRequestClose={() => changeModalVisibility(false)}>
                 <ModalPicker
                     changeModalVisibility={changeModalVisibility}
                     setData={setData} />
@@ -40,25 +42,24 @@ export default function CurrencyInput(props) {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: '#fff',
+        backgroundColor: 'black',
         padding: 10,
         margin: 10,
         borderColor: '#FFA500',
         borderWidth: 1,
         borderRadius: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     text: {
         margin: 10,
         fontSize: 20,
-        fontWeight: 'bold',
+        fontWeight: 'normal',
         color: '#FFA500',
         borderColor: '#FFA500',
         borderWidth: 1,
         borderRadius: 10,
         padding: 10,
     }
-
 
 })

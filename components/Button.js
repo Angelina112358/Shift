@@ -1,11 +1,10 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text, Dimensions } from "react-native";
-
+import { TouchableOpacity, StyleSheet, Text, Dimensions, View } from "react-native";
 const screen = Dimensions.get("window");
 const buttonWidth = screen.width / 4;
 
 export default ({ onPress, text }) => {
-    return(
+    return (
         <TouchableOpacity onPress={onPress} style={styles.button}>
             <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
@@ -14,18 +13,16 @@ export default ({ onPress, text }) => {
 
 const styles = StyleSheet.create({
     text: {
-        color: "#FFA500",
+        color: "white",
         fontSize: 25
     },
     button: {
-        backgroundColor: "#fff",
+        backgroundColor: "#696969",
         flex: 1,
         height: Math.floor(buttonWidth - 10),
         alignItems: "center",
         justifyContent: "center",
         borderRadius: Math.floor(buttonWidth),
-        borderColor: '#FFA500',
-        borderWidth: 1, 
-        margin: 5
-      }
+        margin: 5,
+    }
 })

@@ -19,7 +19,7 @@ export default function Home({ navigation }) {
                 <Button text='Weight' />
             </Row>
             <Row>
-                <Button text='Temperature'/>
+                <Button text='Temperature' />
             </Row>
         </View>
     );
@@ -28,8 +28,8 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#eee',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
-    },
+    }
 });
