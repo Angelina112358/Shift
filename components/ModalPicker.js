@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ScrollView } from 'react-native'
 
-const OPTIONS = ['USD', 'BYN', 'EUR', 'RUB'];
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -11,9 +10,10 @@ const ModalPicker = (props) => {
         props.changeModalVisibility(false);
         props.setData(option);
     }  
-    const option = OPTIONS.map((item, index) => {
+
+    const currs = props.currencies.map((item) => {
         return (
-            <TouchableOpacity style={styles.option} key={index} onPress={() => onPressItem(item)}>
+            <TouchableOpacity style={styles.option} onPress={() => onPressItem(item)}>
                 <Text style={styles.text}>{item}</Text>
             </TouchableOpacity>
         )
@@ -23,7 +23,7 @@ const ModalPicker = (props) => {
             style={styles.container}>
             <View style={styles.modal}>
                 <ScrollView>
-                    {option}
+                    {currs}
                 </ScrollView>
             </View>
         </TouchableOpacity>
