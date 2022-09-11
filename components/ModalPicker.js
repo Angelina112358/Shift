@@ -11,7 +11,7 @@ const ModalPicker = (props) => {
         props.setData(option);
     }  
 
-    const currs = props.currencies.map((item) => {
+    const metrics = props.metrics.map((item) => {
         return (
             <TouchableOpacity style={styles.option} onPress={() => onPressItem(item)}>
                 <Text style={styles.text}>{item}</Text>
@@ -23,7 +23,7 @@ const ModalPicker = (props) => {
             style={styles.container}>
             <View style={styles.modal}>
                 <ScrollView>
-                    {currs}
+                    {metrics}
                 </ScrollView>
             </View>
         </TouchableOpacity>

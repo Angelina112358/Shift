@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, Modal } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import { ModalPicker } from '../components/ModalPicker';
+import { ModalPicker } from './ModalPicker';
 
-export default function CurrencyInput(props) {
+export default function MetricInput(props) {
 
     const [chooseData, setChooseData] = useState('USD');
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -27,7 +27,7 @@ export default function CurrencyInput(props) {
                 
             <Text style={styles.text} onPress={() => changeModalVisibility(true)}>
                 {chooseData}
-                {props.onCurrencyChange(chooseData)}
+                {props.onMetricChange(chooseData)}
             </Text>
 
             <Modal
@@ -38,7 +38,7 @@ export default function CurrencyInput(props) {
                 <ModalPicker
                     changeModalVisibility={changeModalVisibility}
                     setData={setData}
-                    currencies={props.currencies} />
+                    metrics={props.metrics} />
             </Modal>
         </TouchableOpacity>
     )
