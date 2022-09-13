@@ -13,9 +13,15 @@ export default function Currency() {
             })
     }, []);
 
+    function calculateAmount(amount, metric1, metric2) {
+        return amount * rates[metric2] / rates[metric1];
+    };
+
     return (
         <View style={styles.container}>
-            <ConverterScreen data={rates} default='USD' />
+            <ConverterScreen
+                data={rates} default='USD'
+                calculate ={calculateAmount}/>
         </View>
 
     )

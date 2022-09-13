@@ -4,6 +4,7 @@ import { createAppContainer } from "react-navigation";
 
 import Home from '../screens/Home';
 import Currency from '../screens/Currency';
+import Temperature from '../screens/Temperature';
 
 
 const screens = {
@@ -15,7 +16,10 @@ const screens = {
     },
     Currency: {
         screen: Currency
-    }
+    },
+    Temperature: {
+        screen: Temperature
+    },
 }
 
 const HomeStack = createStackNavigator(screens, {

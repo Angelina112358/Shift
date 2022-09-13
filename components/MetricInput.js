@@ -5,7 +5,7 @@ import { ModalPicker } from './ModalPicker';
 
 export default function MetricInput(props) {
 
-    const [chooseData, setChooseData] = useState('USD');
+    const [chooseData, setChooseData] = useState(props.metric);
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const changeModalVisibility = (bool) => {

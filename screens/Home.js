@@ -7,8 +7,12 @@ import Row from '../components/Row';
 
 export default function Home({ navigation }) {    
 
-    const pressHandler = () => {
+    const pressCurrency = () => {
         navigation.push('Currency')
+    };
+
+    const pressTemperature = () => {
+        navigation.push('Temperature')
     };
 
     return (
@@ -16,11 +20,13 @@ export default function Home({ navigation }) {
             <StatusBar style="auto" />
             {/* area with set of choices (currency, weight, temperature) */}
             <Row>
-                <Button text='Currency' onPress={pressHandler} />
+                <Button text='Currency' onPress={pressCurrency} />
+            </Row>
+            <Row>
                 <Button text='Weight' />
             </Row>
             <Row>
-                <Button text='Temperature' />
+                <Button text='Temperature' onPress={pressTemperature}/>
             </Row>
         </View>
     );
