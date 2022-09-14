@@ -15,6 +15,10 @@ export default function Home({ navigation }) {
         navigation.push('Temperature')
     };
 
+    const pressWeight = () => {
+        navigation.push('Weight')
+    };
+
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -23,7 +27,7 @@ export default function Home({ navigation }) {
                 <Button text='Currency' onPress={pressCurrency} />
             </Row>
             <Row>
-                <Button text='Weight' />
+                <Button text='Weight' onPress={pressWeight} />
             </Row>
             <Row>
                 <Button text='Temperature' onPress={pressTemperature}/>
