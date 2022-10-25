@@ -1,10 +1,10 @@
-import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from "react-navigation";
 
 import Home from '../screens/Home';
 import Currency from '../screens/Currency';
 import Temperature from '../screens/Temperature';
+import Weight from '../screens/Weight';
 
 
 const screens = {
@@ -19,6 +19,9 @@ const screens = {
     },
     Temperature: {
         screen: Temperature
+    },
+    Weight: {
+        screen: Weight
     },
 }
 
