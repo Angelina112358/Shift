@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import ConverterScreen from './ConverterScreen';
 
-export default function Weight() {
+export default function Weight () {
 
     const fromTemperature = {
         'Грамм': (value) => { return value },

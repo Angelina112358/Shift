@@ -1,11 +1,14 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import Button from '../components/Button';
-import Row from '../components/Row';
+import Button from '../components/native_components/Button';
+import Row from '../components/native_components/Row';
+
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 
 export default function Home({ navigation }) {    
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
 
     const pressCurrency = () => {
         navigation.push('Currency')
@@ -43,8 +46,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    text: {
-        color: 'white',
-        backgroundColor: 'red',
-    }
 });

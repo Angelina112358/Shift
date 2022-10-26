@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: "#696969",
         flex: 1,
-        height: Math.floor(buttonWidth - 10),
+        height: Math.floor(buttonWidth - 20),
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: Math.floor(buttonWidth),
+        borderRadius: 10,
         margin: 5,
     }
 })

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Modal } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { StyleSheet, Text, TouchableOpacity, Modal, TextInput } from 'react-native';
 import { ModalPicker } from './ModalPicker';
 
 export default function MetricInput(props) {
@@ -16,15 +15,26 @@ export default function MetricInput(props) {
         setChooseData(option);
     }
 
+    const handleSelectionChange = ({ selection }) => {
+        props.onCursorPositionChange(selection.end)
+    }
     return (
-        <TouchableOpacity style={styles.item}>
+        <TouchableOpacity
+            style={styles.item}
+            onPress={() => props.onPress(props.id)}>
             <TextInput style={styles.text}
+                maxLength={15}
+                keyboardType='numeric'
                 placeholder='1'
                 placeholderTextColor="#FFA500"
-                onChangeText={ev=>props.onAmountChange(ev)}>
-                    {props.amount}
-                </TextInput>
-                
+                onChangeText={ev => props.onAmountChange(ev)}
+                selection={{start: props.cursorPosition, end: props.cursorPosition}}
+                value={props.amount}
+                onSelectionChange={handleSelectionChange}
+            >
+                {props.amount}
+                {/* {props.onAmountChange(props.amount)} */}
+            </TextInput>
             <Text style={styles.text} onPress={() => changeModalVisibility(true)}>
                 {chooseData}
                 {props.onMetricChange(chooseData)}

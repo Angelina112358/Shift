@@ -1,41 +1,22 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import ConverterScreen from './ConverterScreen';
 
 export default function Temperature() {
 
     const fromTemperature = {
-        'Celsium': fromC,
-        'Kalvin': fromK,
-        'Faringate': fromF,
+        'Celsium': (value)=>{return value},
+        'Kalvin': (value)=>{return parseFloat(value) - 273},
+        'Faringate': (value)=>{return 5 / 9 * (value - 32)},
     };
     const toTemperature = {
-        'Celsium': toC,
-        'Kalvin': toK,
-        'Faringate': toF,
+        'Celsium': (value)=>{return value},
+        'Kalvin': (value)=>{return parseFloat(value) + 273},
+        'Faringate': (value)=>{return (value * 9) / 5 + 32},
     };
 
-    function fromC(value) {
-        return value;
-    }
-    function fromF(value) {
-        return 5 / 9 * (value - 32);
-    }
-    function fromK(value) {
-        return parseInt(value - 273);
-    }
-
-    function toC(value) {
-        return value;
-    }
-    function toF(value) {
-        return (value * 9) / 5 + 32;
-    }
-    function toK(value) {
-        return value + 273;
-    }
-
     function calculateAmount(amount, metric1, metric2) {
+        //return amount;
         return fromTemperature[metric1](toTemperature[metric2](amount))
     };
 
