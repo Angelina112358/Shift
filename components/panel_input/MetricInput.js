@@ -24,22 +24,17 @@ export default function MetricInput(props) {
             onPress={() => props.onPress(props.id)}>
             <TextInput style={styles.text}
                 maxLength={15}
-                keyboardType='numeric'
-                placeholder='1'
+                keyboardType='null'
+                placeholder='0'
                 placeholderTextColor="#FFA500"
                 onChangeText={ev => props.onAmountChange(ev)}
-                selection={{start: props.cursorPosition, end: props.cursorPosition}}
-                value={props.amount}
-                onSelectionChange={handleSelectionChange}
             >
                 {props.amount}
-                {/* {props.onAmountChange(props.amount)} */}
             </TextInput>
             <Text style={styles.text} onPress={() => changeModalVisibility(true)}>
                 {chooseData}
                 {props.onMetricChange(chooseData)}
             </Text>
-
             <Modal
                 transparent={true}
                 animationType='fade'

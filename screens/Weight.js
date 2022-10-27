@@ -4,25 +4,25 @@ import ConverterScreen from './ConverterScreen';
 
 export default function Weight () {
 
-    const fromTemperature = {
+    const fromWeight = {
         'Грамм': (value) => { return value },
         'Килограмм': (value) => { return value * Math.pow(10, 3) },
         'Фунт': (value) => { return value * 453.6 },
     };
-    const toTemperature = {
+    const toWeight = {
         'Грамм': (value) => { return value },
         'Килограмм': (value) => { return value * Math.pow(10, -3) },
         'Фунт': (value) => { return parseFloat(value) / 453.6 },
     };
 
     function calculateAmount(amount, metric1, metric2) {
-        return fromTemperature[metric1](toTemperature[metric2](amount))
+        return fromWeight[metric1](toWeight[metric2](amount))
     };
 
     return (
         <View style={styles.container}>
             <ConverterScreen
-                data={fromTemperature} default='Грамм'
+                data={fromWeight} default='Грамм'
                 calculate={calculateAmount} />
         </View>
 
