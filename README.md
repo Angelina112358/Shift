@@ -1,4 +1,10 @@
 # Shift
-![imgonline-com-ua-Resize-hEvYxI1eCvH](https://user-images.githubusercontent.com/79206480/189978649-6b6dec15-51af-48ed-a492-bb6441328b3f.jpg)
-![imgonline-com-ua-Resize-8UacFsUTIIJ](https://user-images.githubusercontent.com/79206480/189978661-04d6d5bb-a74c-4efb-904d-8bdd91e80dbd.jpg)
-![imgonline-com-ua-Resize-QYkEArcWOuL](https://user-images.githubusercontent.com/79206480/189978671-6929420b-cd47-47ca-833c-fce07c652f60.jpg)
+## Description
+### 1. Three different unit categories (temperature, weight, currency)
+### 2. Units in each categories:
+####  2.1. Temperature: Kelvin, Fahrenheit, Celsium
+####  2.2. Weight: Gram, Kilogram, Pound
+####  2.3. Currency: units from api https://www.cbr-xml-daily.ru/latest.js
+![imgonline-com-ua-Resize-ymv9HALFpQ](https://user-images.githubusercontent.com/79206480/198762296-ed2cf46a-79be-450e-b7f9-6bc79eab830d.jpg)
+![imgonline-com-ua-Resize-FLiPae3EpGhbvw](https://user-images.githubusercontent.com/79206480/198762699-79cdf172-5b58-4381-9320-b1b5494a04d7.jpg)
+![imgonline-com-ua-Resize-BrhP9BlzpJS3](https://user-images.githubusercontent.com/79206480/198762716-1b946f3a-dbfb-4acf-9fae-32f54f5375bf.jpg)
